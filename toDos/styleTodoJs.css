@@ -1,0 +1,126 @@
+<<<<<<< HEAD
+*{
+    /* border:1px solid black; */
+}
+body{
+    background-color:rgb(255, 255, 255) ;
+}
+.container{    
+    margin:auto;    
+}
+h1{
+    color:rgb(64, 23, 212);
+    font-size:3rem;
+}
+h1,.add,.listContainer{        
+    text-align:center;
+}
+#newTask,#addTask{
+    font-size:1rem;
+    height:2rem;
+}
+#newTask{
+    width:70%;
+    max-width:250px;
+}
+#addTask{
+    width:30%;
+    max-width: 100px;
+}
+#addTask:hover{
+    background-color: rgb(81, 182, 81);
+}
+ul{
+    color:rgb(5, 22, 15);
+    list-style-type: none;
+}
+.list{
+    margin-bottom:10px;
+}
+.list *{
+    font-size:2rem;
+    height:2rem;
+    vertical-align: middle;
+    display:inline;
+}
+
+.list input:first-child{
+    margin-right:20px;
+
+}
+.list p{
+    color:orangered;
+}
+.list button{
+    margin-left:30px;
+    font-size: 1rem;   
+}
+.list button:hover{
+    background-color: red;
+}
+.list input[type="checkbox"]:checked+p{
+    color:green;
+=======
+*{
+    /* border:1px solid black; */
+}
+body{
+    background-color:rgb(255, 255, 255) ;
+}
+.container{    
+    margin:auto;    
+}
+h1{
+    color:rgb(64, 23, 212);
+    font-size:3rem;
+}
+h1,.add,.listContainer{        
+    text-align:center;
+}
+#newTask,#addTask{
+    font-size:1rem;
+    height:2rem;
+}
+#newTask{
+    width:70%;
+    max-width:250px;
+}
+#addTask{
+    width:30%;
+    max-width: 100px;
+}
+#addTask:hover{
+    background-color: rgb(81, 182, 81);
+}
+ul{
+    color:rgb(5, 22, 15);
+    list-style-type: none;
+}
+.list{
+    margin-bottom:10px;
+}
+.list *{
+    font-size:2rem;
+    height:2rem;
+    vertical-align: middle;
+    display:inline;
+}
+
+.list input:first-child{
+    margin-right:20px;
+
+}
+.list p{
+    color:orangered;
+}
+.list button{
+    margin-left:30px;
+    font-size: 1rem;   
+}
+.list button:hover{
+    background-color: red;
+}
+.list input[type="checkbox"]:checked+p{
+    color:green;
+>>>>>>> 6a82c0cc270ac397a9074af6df8eaa3b7577e4a0
+}
