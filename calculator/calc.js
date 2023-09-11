@@ -13,7 +13,7 @@ function addButtons(div,arr){
     arr.forEach(e=>{
         const button = document.createElement("button");
         button.textContent = e;
-        button.onclick = modifyDisplay;
+        button.addEventListener("click",modifyDisplay);
         div.appendChild(button);
     })
 }
