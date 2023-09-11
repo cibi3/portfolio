@@ -62,8 +62,11 @@ function addDecimalToDisplay(){
                 if(parsedOutput==NaN){
                     return output;
                 }
-                else {
-                    return parsedOutput.toPrecision(6);
+                else if(parseInt(output)===parsedOutput){
+                        return parseInt(output);
+                    }
+                else{
+                    return parsedOutput.toFixed(6);
                 }
 
             }
