@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var columns="3";
+        totalCells="9"
+        var op=getAllNeighboursIdNum(8);
+        console.log(op);
+        function getAllNeighboursIdNum(idNum){
+            var neighbourDiff=[-1,0,1];
+            var neighboursIdNumArray=[];
+            for(let i of neighbourDiff){
+                for(let j of neighbourDiff){
+                    let neighbourIdNum=(idNum+i)+(columns*j);
+                    if(neighbourIdNum!=idNum && neighbourIdNum>=0 && neighbourIdNum<totalCells){
+                        neighboursIdNumArray.push(neighbourIdNum);
+                    }
+                }
+
+            }    
+            return neighboursIdNumArray;
+        }
+    </script>
+</body>
+</html>

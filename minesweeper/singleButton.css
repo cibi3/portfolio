@@ -1,0 +1,9 @@
+input[type="button"]{
+    width:20vw;
+    height:20vh;
+    background-color:yellow;
+}
+
+input[bcolor="r"]{
+    background-color: orange;
+}

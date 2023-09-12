@@ -1,0 +1,91 @@
+
+-Get bombLocations array
+    #Go to elements with id in bombLocations and set svalue =b and set =yes
+-Set remaining cells
+    #Loop through all id
+    #If set is null, count bombs around cells and store in svalue and set =yes
+-addEventListener mousedown to all button types 
+    #on leftousedown   set press=1 remove event listener
+        -if value is b game over display value
+        -if empty display value & check  for surrounding empty cells
+            #if flag set no display
+        -if num display
+            #if flag set no display
+    #on rightmousedown alternate on set flag   (1,-1) alternate press    
+-if(total press=cells)
+    -run through flag locations and flag loc != bomb loc ! display cross and game failed
+    Else success
+
+
+var totalPressedNonBombCells= 0
+(call at end of each left mousedown)
+run thorugh all nonBom buttons 
+    if press=true 
+        increment totalPressedNonBombCells
+
+if totalPressedNonBombCells=totalNonBombCells
+    display all bombCells
+    display correct placement style for all flagCells
+    display success 
+    
+mousedown on button-
+dig-    
+    if leftmouse
+        if sVal bomb   
+            call bombCellPress                      
+                display all cell values
+                check flag placement
+                    run through  flagCells
+                    if sval is bomb
+                        display correct placement style
+                    else 
+                        display wrong placement style          
+                display explode style                                             
+                display gameover
+        if sVal >0
+            call bannerCellPress
+                display cell value with style
+                update press=true 
+                remove listener for cell            
+        if sVal=0
+            call emptyCellPress
+                display empty style
+                update press=true 
+                remove listener for cell
+                call openNeighbouringNonBombNonFlagCells                    
+                    var neighbourCells getAllNeighboursIdNum(idNum)
+                    var nonBombNonFlagCells= filter by nonBombNonFlagCellsFilter()
+                        if press=false flag=false sVal!=b
+                    for each nonBombNonFlagCells
+                         call openNonBombNonFlagCell(node)                                               
+                            call CellCheck                                
+                                if  sVal>0 
+                                    call bannerCellPress                                    
+                                if empty
+                                    call emptyCellPress
+    rightmouse
+        call invertFlagPosition            
+            invert flag value            
+            if call flagDisplayCheck(node) 
+                display flag style
+                insert index in flagCellIndices                     
+            Else
+                remove flag style
+                remove index in flagCellIndices
+
+
+bombCounter-
+    Display total bombs and reduce for each flag placement.
+    Start at first button press
+
+Timer
+    Show time from first button press
+    Display zero before press
+    Stop when game over or complete
+
+
+    
+
+
+
+
