@@ -1,7 +1,8 @@
 {
+  "type": "module",
   "dependencies": {
     "express": "^4.18.2",
     "mongoose": "^7.5.1"
-  },
-  "type": "module"
+  }
+ 
 }

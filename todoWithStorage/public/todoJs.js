@@ -1,4 +1,5 @@
-import mongoose from "mongoose";
+
+import { connect, connection } from 'mongoose';
 const taskNameInput = document.querySelector("#newTask");
 const addBtn = document.querySelector("#addTask");
 const todoList = document.querySelector("#displayList");
@@ -7,7 +8,7 @@ addBtn.onclick = addTask;
 displaySavedList();
 
 async function displaySavedList(){
-    mongoose.connect("mongodb://127.0.0.1:27017/todoDB");
+    connect("mongodb://127.0.0.1:27017/todoDB");
 // const todoSchema = new mongoose.Schema({
 //     checked: Boolean,
 //     task: String
@@ -29,7 +30,7 @@ const payEb = new todos({
 await todos.insertMany([buyGrocery,payEb]);
 await todos.deleteOne({task:"pay eb bill before 2nd week"});*/
 const savedList = await todos.find({});
-mongoose.connection.close();
+    connection.close();
 
 savedList.forEach(e=>{
     listElementWithChkbxParaDeleteButton(e.checked,e.task);       
