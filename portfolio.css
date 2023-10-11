@@ -1,0 +1,46 @@
+/* *{
+    border: 1px solid black;
+} */
+html{
+    height:100%;
+    /* width: 100%; */
+    background-image:linear-gradient(to bottom right,rgb(112, 174, 202),green);
+}
+
+h1,h2{
+    text-align:center;  
+}
+h1{
+    font-size: 2rem;
+    color:navy;
+}
+h2{
+    font-size:1.5rem;   
+}
+h2>a{
+    text-decoration: none; 
+}
+h2>a:hover{
+    color:violet;
+}
+#container{
+    display:flex;
+    justify-content: space-around;
+    align-items:flex-start;
+
+}
+.menu{
+    width:25vw;
+    height:60vh;
+    border:1px solid black;
+}
+.screenshot{
+    max-width:100%;
+    height:40vh;
+    display:block;
+    margin:auto;
+}
+.screenshot:hover{
+    opacity:.5;
+    border: 1px solid red;
+}
